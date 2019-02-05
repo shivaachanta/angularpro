@@ -1,0 +1,30 @@
+<form [formGroup]="mainForm" >
+  <div class="form-group">
+    <label>FirstName
+      <input type="text" formControlName="firstname">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>LastName
+      <input type="text" formControlName="lastname">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>password
+      <input type="password" formControlName="password">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>email
+      <input type="text" formControlName="email">
+    </label>
+  </div>
+  <div class="form-group">
+      <label>phone
+        <input type="text" formControlName="phone">
+      </label>
+    </div>
+  <button type="submit" (click)="onSubmit()" class="btn btn-default">Submit</button>
+</form>
+
+{{mainForm.value | json}}
